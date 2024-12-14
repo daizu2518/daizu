@@ -6,13 +6,20 @@
     <title>大豆のホームページ</title>
     <!-- CSSスタイルを<head>内に配置 -->
     <style>
-        .unko {
-            background: linear-gradient(to right, #e60000, #f39800, #fff100, #009944, #0068b7, #1d2088, #920783);
+        .rainbow-text {
+            background: linear-gradient(90deg, #e60000, #f39800, #fff100, #009944, #0068b7, #1d2088, #920783);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: rainbow 10s ease infinite;
             font-size: 300%;
             font-weight: bold;
-            text-align: center; /* 中央寄せに設定 */
+            text-align: center;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
     <!-- faviconを追加 -->
@@ -20,9 +27,8 @@
 </head>
 <body background="image\ダウンロード (4).png">
     <main>
-        <!-- タイトル部分 -->
-        <div class="unko">
-            大豆（公式）のホームページ
+        <div class="rainbow-text">
+            大豆のホームページ
         </div>
     </main>
     <hr size="10" noshade>
